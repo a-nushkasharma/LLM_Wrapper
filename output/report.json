@@ -1,0 +1,10 @@
+{
+  "contract_file": "uploaded_contract.sol",
+  "analysis_results": [],
+  "documentation": {
+    "region": "Function or basic block in the contract",
+    "basic_block_summary": "High-level summary of what this block does",
+    "violated_property": "Security property likely violated",
+    "reason": "Explanation for why this might be vulnerable"
+  }
+}

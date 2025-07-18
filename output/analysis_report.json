@@ -1,0 +1,13 @@
+{
+  "contract": "sample2.sol",
+  "suspicious_regions": [
+    {
+      "line_range": "12-18",
+      "violation": "Reentrancy Risk"
+    },
+    {
+      "line_range": "42-45",
+      "violation": "Unchecked Low-level Call"
+    }
+  ]
+}
