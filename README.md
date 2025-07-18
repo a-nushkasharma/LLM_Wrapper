@@ -1,7 +1,7 @@
 # Smart Contract Vulnerability Analyzer
 A Streamlit-powered web application that uses LLM-based analysis to identify security vulnerabilities in Solidity smart contracts. Upload a .sol file and instantly receive a vulnerability report in JSON format.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Technology      | Description                                                     |
 |-----------------|-----------------------------------------------------------------|
@@ -15,7 +15,7 @@ A Streamlit-powered web application that uses LLM-based analysis to identify sec
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 ```bash
 smart-contract-analyzer/
 ├── app.py                  # Main Streamlit application
@@ -28,13 +28,13 @@ smart-contract-analyzer/
 └── prompt_template.py      # Prompt that is to be passed to the LLM for desired results
 ```
 ---
-##  Installation
-### Prerequisites
+## 🚀 Installation
+### 🔧 Prerequisites
 - Python 3.9+
 - pip(Python Package Manager)
 - Virtual Environment tool like venv(Optional)
 ---
-### Setup Instructions
+### 🧩 Setup Instructions
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/smart-contract-analyzer.git
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ---
-## How It Works
+## ▶️ How It Works
 - User uploads a .sol file via the sidebar.
 - File is saved locally under uploads/.
 - A simulated LLM (placeholder logic for now) analyzes the code.
