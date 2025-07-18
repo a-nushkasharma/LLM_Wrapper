@@ -2,10 +2,9 @@ import streamlit as st
 import os
 import json
 
-# Page setup
+
 st.set_page_config(layout="wide", page_title="Smart Contract Vulnerability Analyzer")
 
-# Sidebar layout (left panel)
 with st.sidebar:
     st.markdown("## 📂 Upload Solidity Smart Contract")
     st.markdown("Upload a `.sol` file and click Submit to analyze it.")
@@ -19,11 +18,9 @@ with st.sidebar:
 
     submit_button = st.button("🚀 Submit & Analyze")
 
-# Main area (right panel)
 st.markdown("<h1 style='font-size: 36px;'>🔎 Smart Contract Vulnerability Analyzer</h1>", unsafe_allow_html=True)
 
 if uploaded_file and submit_button:
-    # Save uploaded file to disk
     file_path = os.path.join("uploads", uploaded_file.name)
     os.makedirs("uploads", exist_ok=True)
     with open(file_path, "wb") as f:
@@ -38,7 +35,6 @@ if uploaded_file and submit_button:
     # from your_analysis_module import analyze_contract
     # result = analyze_contract(file_path)
 
-    # Simulated result
     result = {
         "contract": uploaded_file.name,
         "suspicious_regions": [
@@ -53,16 +49,13 @@ if uploaded_file and submit_button:
         ]
     }
 
-    # Display results
     st.json(result)
 
-    # Save result to JSON
     os.makedirs("output", exist_ok=True)
     json_path = os.path.join("output", "analysis_report.json")
     with open(json_path, "w") as f:
         json.dump(result, f, indent=2)
 
-    # Add download button
     st.download_button(
         label="📥 Download JSON Report",
         data=json.dumps(result, indent=2),
